@@ -1,7 +1,8 @@
 
-def bank(summ,year):
-    for i in range (year):
-        summ=summ+(summ*summ)
-        return print(summ)
-    
-bank(2500,15)
+def bank(summ, years):
+    for i in range(years):
+        summ += summ * 0.10  
+    return summ
+
+result = bank(2500, 15)
+print(result)
