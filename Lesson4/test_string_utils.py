@@ -68,7 +68,7 @@ def test_contains(string, symbol, result):
     ('456', '5', '46'),
 ])
 def test_delete_symbol(string, symbol, result):
-    res == utils.delete_symbol(string, symbol)
+    res = utils.delete_symbol(string, symbol)
     assert res == result 
 
 'starts_with'
@@ -83,7 +83,7 @@ def test_delete_symbol(string, symbol, result):
     ('hello', 'l', False)
 ])
 def test_starts_with(string, symbol, result):
-    res == utils.starts_with(string, symbol)
+    res = utils.starts_with(string, symbol)
     assert res == result 
 
 
@@ -97,16 +97,16 @@ def test_starts_with(string, symbol, result):
     ('456', '4', False),   
 ])
 def test_end_with(string, symbol, result):
-    res == utils.end_with(string, symbol)
+    res = utils.end_with(string, symbol)
     assert res == result 
 
 'is_empty'
 @pytest.mark.parametrize('string, result', [
     ('', True),
-    ('стол' False)
+    ('стол', False)
 ])
 def test_is_empty(string, result):
-    res == utils.is_empty(string)
+    res = utils.is_empty(string)
     assert res == result 
 
 'list_to_string'
@@ -114,12 +114,11 @@ def test_is_empty(string, result):
     (['h','i'], '', 'hi')
     ([1,2,3],None, '1,2,3')
     (['dream', 'team'], '-', 'dream-team')
-
     ([], None, '')
 ])
 def test_list_to_string(lst, joiner, result):
     if joiner == None:
-         res == utils.list_to_string(lst)
+         res = utils.list_to_string(lst)
     else:
-         res == utils.list_to_string(lst, joiner)
+         res = utils.list_to_string(lst, joiner)
     assert res == result 
